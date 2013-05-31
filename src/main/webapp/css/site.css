@@ -1,0 +1,204 @@
+/**
+ * Copyright 2012, Board of Regents of the University of
+ * Wisconsin System. See the NOTICE file distributed with
+ * this work for additional information regarding copyright
+ * ownership. Board of Regents of the University of Wisconsin
+ * System licenses this file to you under the Apache License,
+ * Version 2.0 (the "License"); you may not use this file
+ * except in compliance with the License. You may obtain a
+ * copy of the License at:
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on
+ * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied. See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+.userForms
+{
+    margin:0 auto;
+    padding:3em;
+}
+
+#stylizedForm
+{
+	float : right;
+}
+
+#stylizedForm label
+{
+    display:block;
+    font-weight:bold;
+    width:10em;
+    margin-right: .75em;
+}
+
+#stylizedForm label.spacer
+{
+	float: none;
+}
+
+#stylizedForm input textarea #keyLength
+{
+    float:left;
+    font-size:12px;
+    padding:4px 2px;
+    border:solid 1px #aacfe4;
+    width:200px;
+    margin:2px 0 20px 10px;
+}
+#stylizedForm #serviceNames
+{
+    float:left;
+    padding:4px 4px;
+    border:solid 1px #aacfe4;
+    width:250px;
+    margin:5px 5px 20px 10px;
+}
+
+#stylizedForm button
+{
+    clear:both;
+    width:15em;
+    height:2em;
+    background:#666666 no-repeat;
+    text-align:center;
+    vertical-align: middle;;
+    color:#FFFFFF;
+    font-size:.75em;
+    font-weight:bold;
+}
+
+#stylizedForm button.smaller
+{
+	width: 6em;
+}
+
+#stylizedForm button.shiftRight 
+{
+	margin-left:14em;
+}
+
+#keyLength
+{
+    float: left;
+}
+
+#success span.label
+{
+	font-weight:bold;
+	padding : 0;
+}
+
+span.keyDownloads 
+{
+	padding: 10px 0 10px 0;
+	line-height: 50px;
+}
+
+p.warning 
+{
+	padding: 10px 10px 10px 10px;
+	-moz-border-radius: 5px; /* Firefox */
+    -webkit-border-radius: 5px; /* Safari */
+    border-radius: 5px; /* CSS3 (Opera?) */
+    border-style: solid;
+    border-width: 1px;
+    background-color: #FFE7E7;
+    border-color: #DF9898;
+    border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-top-width: 1px;
+    border-top-style: solid;
+}
+
+
+
+.ui-combobox {
+    position: relative;
+    display: inline-block;
+}
+.ui-combobox-toggle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin-left: -1px;
+    padding: 0;
+    /* support: IE7 */
+    *height: 1.7em;
+    *top: 0.1em;
+}
+.ui-combobox-input {
+    margin: 0;
+    padding: 0.3em;
+}
+
+.ui-menu-item
+{
+    list-style: none;
+}
+
+form ul {
+	margin-left: 13em;
+	display: block;
+	list-style-type: disc;
+	-webkit-margin-before: 1em;
+	-webkit-margin-after: 1em;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+	-webkit-padding-start: 40px;
+	padding: 0;
+	list-style-type: none;
+}
+
+form li {
+	list-style-type: none;
+	width: auto !important;
+	
+}
+
+form li:AFTER, form ul:AFTER {
+	visibility: hidden;
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+form ul label {
+	font-size: 95%;
+	font-weight: bold;
+	color: #222;
+	line-height: 150%;
+	margin: 0;
+	padding: 0 0 3px 0;
+	border: none;
+	display: block;
+	white-space: normal;
+	width: 100%;
+}
+
+form ul li button {
+    clear:both;
+    width:140px;
+    height:30px;
+    padding: 5px;
+    background:#666666 no-repeat;
+    text-align:center;
+    vertical-align: middle;;
+    color:#FFFFFF;
+    font-size:12px;
+    font-weight:bold;
+}
+
+ul.center {
+	margin-left: 13em;
+}
+
+#ajaxError { padding: 0.4em; position: relative; }
+
+hr.sidebar {height:.4em; background-color: #efe8d8; border: none;'}
