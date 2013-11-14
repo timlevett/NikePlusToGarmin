@@ -13,42 +13,6 @@
   </properties>
   <repositories>
     <repository>
-      <id>code.doit-uw-releases</id>
-      <url>https://code.doit.wisc.edu/maven/content/repositories/public-releases/</url>
-    </repository>
-    <repository>
-      <id>code.doit-public-releases</id>
-      <url>https://code.doit.wisc.edu/maven/content/repositories/public-releases/</url>
-    </repository>
-    <repository>
-      <id>code.doit-public-3rd-party</id>
-      <url>https://code.doit.wisc.edu/maven/content/repositories/public-3rd-party/</url>
-    </repository>
-    <repository>
-      <releases>
-        <enabled>false</enabled>
-      </releases>
-      <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
-      <id>code.doit-public-snapshots</id>
-      <url>https://code.doit.wisc.edu/maven/content/repositories/public-snapshots/</url>
-    </repository>
-    <repository>
-      <id>code.doit-uw-3rd-party</id>
-      <url>https://code.doit.wisc.edu/maven/content/repositories/uw-3rd-party/</url>
-    </repository>
-    <repository>
-      <releases>
-        <enabled>false</enabled>
-      </releases>
-      <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
-      <id>code.doit-uw-snapshots</id>
-      <url>https://code.doit.wisc.edu/maven/content/repositories/uw-snapshots/</url>
-    </repository>
-    <repository>
       <snapshots>
         <enabled>false</enabled>
       </snapshots>
@@ -214,10 +178,19 @@
         <artifactId>standard</artifactId>
         <version>1.1.2</version>
       </dependency>
+      <dependency>
+	    <groupId>ca.carleton.gcrc</groupId>
+	    <artifactId>nunaliit2-gpx</artifactId>
+	    <version>2.1.2</version>
+	  </dependency>
     </dependencies>
   </dependencyManagement>
   
   <dependencies>
+  	<dependency>
+	    <groupId>ca.carleton.gcrc</groupId>
+	    <artifactId>nunaliit2-gpx</artifactId>
+	</dependency>
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
       <artifactId>jackson-databind</artifactId>

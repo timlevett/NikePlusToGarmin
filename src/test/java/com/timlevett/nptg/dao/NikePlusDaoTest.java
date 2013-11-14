@@ -10,14 +10,26 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import com.timlevett.nptg.model.Activity;
 
 public class NikePlusDaoTest {
+	
+	protected String token = "8432158d5ca35c8985b663667b4ff71";
 	NikePlusDaoImpl dao = new NikePlusDaoImpl();
 	
 	@Test
 	public void getActivityTest() {
-		List<Activity> results = dao.getActivities("<REMOVED");
+		List<Activity> results = dao.getActivities(token);
 		for(Activity activity : results) {
 			System.out.println(activity.getActivityType());
 			System.out.println(activity.getMetricSummary().getDistance());
+		}
+		int size = results.size();
+	}
+	
+	@Test
+	public void getActivityGPSDataTest() {
+		List<Activity> results = dao.getActivities(token);
+		for(Activity activity : results) {
+			dao.getActivityGPSData(token, activity);
+			break;
 		}
 		int size = results.size();
 	}

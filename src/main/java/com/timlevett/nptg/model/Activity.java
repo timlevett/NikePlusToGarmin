@@ -24,6 +24,7 @@ public class Activity {
 	String deviceType;
 	MetricSummary metricSummary;
 	LinkedList <Tag> tags;
+	LinkedList <Metric> metrics;
 	
 	public class MetricSummary {
 		Integer calories;
@@ -128,4 +129,14 @@ public class Activity {
 	public void setTags(LinkedList<Tag> tags) {
 		this.tags = tags;
 	}
+
+	public LinkedList<Metric> getMetrics() {
+		return metrics;
+	}
+
+	public void setMetrics(LinkedList<Metric> metrics) {
+		this.metrics = metrics;
+	}
+	
+	
 }
