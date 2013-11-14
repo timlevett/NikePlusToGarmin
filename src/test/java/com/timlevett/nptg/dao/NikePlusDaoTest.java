@@ -11,7 +11,7 @@ import com.timlevett.nptg.model.Activity;
 
 public class NikePlusDaoTest {
 	
-	protected String token = "8432158d5ca35c8985b663667b4ff71";
+	protected String token = "REMOVED";
 	NikePlusDaoImpl dao = new NikePlusDaoImpl();
 	
 	@Test
