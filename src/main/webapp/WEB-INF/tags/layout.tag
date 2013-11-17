@@ -45,7 +45,7 @@
   
   <core:url value="/apps/Login" var="LoginURL" />
   <core:url value="/apps/logout" var="LogoutURL" />
-  <core:url value="/apps/create" var="HomeTokenUrl" />
+  <core:url value="/apps/List" var="viewListActivityURL" />
   <!-- Collect the nav links, forms, and other content for toggling -->
   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav">
@@ -53,7 +53,7 @@
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Quick Links <b class="caret"></b></a>
         <ul class="dropdown-menu">
           <li><a href="${LoginURL}">Login</a></li>
-          <li><a href="${HomeTokenUrl}">Create Nike Plus Token</a></li>
+          <li><a href="${viewListActivityURL}">View List of Activities</a></li>
           <li class="divider"></li>
 		  <li><a href="https://developer.nike.com/console" target="_blank">Nike+ Console Login</a></li>
         </ul>

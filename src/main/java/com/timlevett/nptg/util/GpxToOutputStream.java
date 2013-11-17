@@ -4,12 +4,7 @@ import java.io.OutputStream;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.Marshaller;
-import javax.xml.bind.Unmarshaller;
-
 import com.topografix.gpx._1._0.Gpx;
-
-import ca.carleton.gcrc.gpx._10.Gpx10;
-import ca.carleton.gcrc.gpx._11.Gpx11;
 
 public class GpxToOutputStream {
 	public void getOutputstream(Gpx gpx, OutputStream os) throws Exception {

@@ -14,22 +14,22 @@ import static com.timlevett.nptg.util.NPTGConstants.*;
 
 
 @Controller
-public class TokenCreationController {
+public class LoginLogoutController {
 	
 	@RequestMapping(value = "/Login", method = RequestMethod.GET) 
 	public String returnLoginPage () {
-		return "login";
+		return LOGIN;
 	}
 	
 	@RequestMapping(value = "/Login", method = RequestMethod.POST) 
 	public String buildLogin (@RequestParam(required=false) String name, @RequestParam String token, ModelMap model, HttpServletRequest request) {
 		if(StringUtils.isBlank(token)) {
 			model.addAttribute("error","token.required");
-			return "login";
+			return LOGIN;
 		}
 		request.getSession().setAttribute(TOKEN,token);
 		request.getSession().setAttribute(USER,name);
-		return "home";
+		return HOME;
 	}
 	
 	@RequestMapping(value = "/logout",method=RequestMethod.GET) 
@@ -38,7 +38,7 @@ public class TokenCreationController {
 		request.getSession().removeAttribute(TOKEN);
 		request.getSession().removeAttribute(USER);
 		
-		return "login";
+		return LOGIN;
 	}
 
 }
