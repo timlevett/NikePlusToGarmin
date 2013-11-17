@@ -7,12 +7,13 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import com.timlevett.nptg.api.NikePlusDao;
 import com.timlevett.nptg.model.Activity;
 
-public class NikePlusDaoTest {
+public class NikePlusDaoIT {
 	
 	protected String token = "REMOVED";
-	NikePlusDaoImpl dao = new NikePlusDaoImpl();
+	NikePlusDao dao = new NikePlusDaoImpl();
 	
 	@Test
 	public void getActivityTest() {

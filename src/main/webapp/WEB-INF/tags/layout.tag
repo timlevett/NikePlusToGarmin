@@ -5,65 +5,86 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.0/themes/base/jquery-ui.css" />
+
+<!-- Jquery -->
 <link rel="icon" type="image/gif" href="${pageContext.request.contextPath}/images/favicon.ico" />
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js"></script>
-<script type="text/javascript" src="${ pageContext.request.contextPath }/js/jquery.zclip.min.js" ></script>
-<title>${pageTitle} | University of Wisconsin-Madison</title>
 
-<link rel="stylesheet"	href="${pageContext.request.contextPath}/css/main_no_top_nav.css" type="text/css" media="all" />
+<!-- Bootstrap -->
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"></link>
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap-theme.min.css"></link>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+<title>${pageTitle} | Nike Plus Data Mapper</title>
+
 <link rel="stylesheet"	href="${pageContext.request.contextPath}/css/site.css" type="text/css" media="all" />
-<!--[if IE 6]>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/ie6.css" type="text/css" media="screen" />
-  <![endif]-->
-<!--[if IE 7]>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/ie7.css" type="text/css" media="screen" />
-  <![endif]-->
-<!--[if IE 8]>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/ie8.css" type="text/css" media="screen" />
-  <![endif]-->
 
 </head>
 <body>
-	<div class="wrap">
-		<div id="home">
-			
-			<div id="shell">
-				<div id="sidebar" class="col">
 
-					<ul id="secondary-nav">
-						<li>
-							<core:url value="/apps/login" var="LoginURL" />
-							<a href="${LoginURL}">Login</a>
-						</li>
-						<li>
-						    <core:url value="/apps/create" var="HomeTokenUrl" />
-							<a href="${HomeTokenUrl}">Create Service Key</a>
-						</li>
-						<li>
-						<hr class="sidebar" />
-						</li>
-					</ul>
-				</div>
-				<div id="content" class="main col">
-				    <core:if test="${not empty errorMessage}">
-					   	<div class="error">
-					   		Error: <spring:message code="${errorMessage}" arguments="${zero}" />
-					   	</div>
-					</core:if>
-				    <jsp:doBody />
-				</div>
-			</div>
-		</div>
+<core:url value="/" var="rootURL" />
 
-		<div id="footer">
-			<p>Written by Tim Levett</p>
-			<p>
-				<a href="http://nocableneeded.blogspot.com">Contact Me</a>
-			</p>
-		</div>
+<nav class="navbar navbar-default" role="navigation">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="${rootURL }">TimTim</a>
+  </div>
+  
+  <!-- Links -->
+  
+  
+  <core:url value="/apps/Login" var="LoginURL" />
+  <core:url value="/apps/logout" var="LogoutURL" />
+  <core:url value="/apps/create" var="HomeTokenUrl" />
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav">
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Quick Links <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="${LoginURL}">Login</a></li>
+          <li><a href="${HomeTokenUrl}">Create Nike Plus Token</a></li>
+          <li class="divider"></li>
+		  <li><a href="https://developer.nike.com/console" target="_blank">Nike+ Console Login</a></li>
+        </ul>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <core:if test="${not empty sessionScope.TOKEN }">
+      	<li><a href="">Hello ${sessionScope.USERNAME }</a></li>
+      	<li><a href="${LogoutURL}">Logout</a></li>
+      </core:if>
+      <core:if test="${empty sessionScope.TOKEN }">
+      	<li><a href="${LogoutURL}">Login</a></li>
+      </core:if>
+    </ul>
+  </div><!-- /.navbar-collapse -->
+</nav>
 
-	</div>
+<div class="panel panel-default">
+  <div class="panel-body">
+    <core:if test="${not empty error}">
+	   	<div class="alert alert-danger">
+	   		<b>Error: </b><spring:message code="${error}" arguments="${zero}" />
+	   	</div>
+	</core:if>
+    <jsp:doBody />
+  </div>
+  <div class="panel-footer">
+  	<p>Written by Tim Levett</p>
+	<p>
+		<a href="http://nocableneeded.blogspot.com">Contact Me</a>
+	</p>
+</div>
 </body>
 </html>

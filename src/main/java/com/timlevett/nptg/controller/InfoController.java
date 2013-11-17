@@ -27,6 +27,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class InfoController {
 	@RequestMapping(value = "/info", method = RequestMethod.GET) 
 	public String getTestPage () {
-		return "testjsp";
+		return "welcome";
 	}
 }
