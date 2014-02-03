@@ -8,19 +8,6 @@
     xsi:schemaLocation="http://java.sun.com/xml/ns/jaxb http://java.sun.com/xml/ns/jaxb/bindingschema_2_0.xsd"
     jaxb:version="2.1"
 >
-
-    <!-- <jaxb:bindings>
-        <jaxb:globalBindings fixedAttributeAsConstantProperty="true" enableFailFastCheck="true">
-            <jaxb:javaType name="org.joda.time.DateTime" xmlType="xs:dateTime" parseMethod="edu.wisc.jaxb.util.JodaTypeConverter.parseDateTime" printMethod="edu.wisc.jaxb.util.JodaTypeConverter.printDateTime" />
-            <jaxb:javaType name="org.joda.time.DateMidnight" xmlType="xs:date" parseMethod="edu.wisc.jaxb.util.JodaTypeConverter.parseDate" printMethod="edu.wisc.jaxb.util.JodaTypeConverter.printDate" />
-            <jaxb:javaType name="org.joda.time.DateTime" xmlType="xs:time" parseMethod="edu.wisc.jaxb.util.JodaTypeConverter.parseTime" printMethod="edu.wisc.jaxb.util.JodaTypeConverter.printTime" />
-            <jaxb:serializable/>
-            <xjc:simple />
-        </jaxb:globalBindings>
-    </jaxb:bindings> -->
-
-
-    <!-- CI_UW_PORTAL1_ABSBAL.1.wsdl -->
     <jaxb:bindings schemaLocation="../resources/schemas/gpx.xsd">
         <jaxb:schemaBindings>
             <jaxb:package name="com.timlevett.nptg.gpx" />
